@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.primary-color{
+    color: #FFF
+}
+
+.secundary-color{
+    color: #F2A03D;
+}
+
+#logo {
+    width: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    background: url('../img/bg4.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Cabeçalho */
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    /*border-bottom: 2px solid #fff;*/
+    margin-bottom: 45px;
+}
+
+header ul{
+    display: flex;
+}
+
+header ul li{
+    padding: 5px;
+    padding-bottom: 5px;
+    transition: 0.5s;
+}
+
+header ul li a{
+    position: relative;
+    padding: 0 10px;
+}
+
+header ul li a::after{
+    content: '';
+    position: absolute;
+    background-color: #F2A03D;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+header ul li a:hover{
+    color: #F2A03D;
+}
+
+header ul li a:hover::after{
+    width: 100%;    
+}
+
+/* Animar cusor */
+
+h1::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: cusor .7s infinite;
+}
+
+@keyframes cusor{
+    0%, 100%{
+      opacity: 1;
+    }
+    50%{
+      opacity: 0;
+    }
+}
+
+/* Main */
+.container{
+    text-align: center;
+}
+
+.container .name h1{
+    font-size: 60px;
+}
+
+.container .name h5{
+    font-size: 25px;
+}
+
+#arrow{
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+.active{
+    display: block !important;
+}
+
+@keyframes blink{
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation{
+    margin-top: 5px;
+    transition: 300ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+#about p{
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.form{
+    width: 40%;
+    margin: 30px auto;
+}
+
+.form input{
+    width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.form button{
+    background-color: #F2A03D;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 15%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    margin-top: 30px;
+    margin-left: -10px;
+    transition: 0.3s;
+}
+
+.form button:hover{
+    background-color: transparent;
+    color: #F2A03D;
+    border: 1px solid #F2A03D;
+    cursor: pointer;
+    text-shadow: none;
+}
+
+/* Footer */
+.rodape{
+    display: flex;
+    justify-content: space-around;
+    background: rgb(0,30,188);
+    background: linear-gradient(160deg, rgba(0,30,188,1) 0%, rgba(2,3,38,1) 49%, rgba(158,7,7,1) 100%);
+    border-top: 1.5px solid rgb(240, 240, 240);
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+}
+
+.rodape p{
+    margin-top: 15px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.apoio{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 10px;
+    gap: 10px;
+}

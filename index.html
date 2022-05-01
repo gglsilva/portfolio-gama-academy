@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap icon-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>.: Gabriel Lucas :.</title>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <img id="logo" src="static/img/logo1.png" alt="Logo Gabriel">
+        </div>
+        <ul>
+            <li><a target="_blank" class="primary-color" href="https://github.com/gglsilva">GitHub</a></li>
+            <li><a target="_blank" class="primary-color" href="https://linkedin.com/in/gabriellucasgs">Linkedln</a></li>
+            <li><a target="_blank" class="primary-color" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox">E-mail</a></li>
+        </ul>
+    </header>
+    
+    <main>
+        
+        <section class="container">
+            <div class="name">
+                <h1 class="primary-color">Gabriel Lucas</h1>
+                <h5 class="secundary-color">Back-end developer</h5>
+            </div>
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-circle-arrow-down primary-color"></i>
+            </div>
+            <div style="display: none;" id="about">
+                <span class="secundary-color">Olá pessoal tranquilo!</span>
+                <p class="secundary-color">
+                    Sou desenvolvedor back-end, uso a linguagem <strong>Python</strong>  e framework <strong> Django</strong> para projetos web
+                    Atualmente participando do <strong>HiringCoder#3</strong> para aperfeiçoar minhas habildades no front-end é evoluir rumo ao
+                    full stack developement.
+                </p>
+            </div>
+            <div class="form">
+                <p class="primary-color">Deixe seu contato</p>
+                <form action="">
+                    <input type="text" name="nome" placeholder="Seu melhor email ;)">
+                    <button>enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="rodape">
+            <img id="logo" src="static/img/logo1.png" alt="Logo Gabriel">
+            <p class="primary-color">&copy; 2022 Desenvolvidor por Gabriel Lucas | Todos os direitos reservados.</p>
+            <div class="apoio">
+                <img id="logo-hiring" src="static/img/hiringcoders-removebg.png" alt="">
+                <img id="logo-vtex" src="static/img/VTEX_Logo.svg.png" alt="">
+                <img id="logo-gama" src="static/img/gama-academy-logo-horizontal-verde-branco1.png" alt="">
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts do projeto -->
+    <script src="static/js/efeito.js"></script>
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
